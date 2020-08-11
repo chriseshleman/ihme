@@ -1,0 +1,20 @@
+---
+title: "IHME"
+author: "Chris Eshleman"
+date: "8/11/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, include=TRUE)
+```
+
+```{r}
+dat = read.csv("~/Dropbox/Work and research/Port Authority/ihme/Reference_hospitalization_all_locs.csv")
+mini = subset(dat, dat$location_name=="Florida" | dat$location_name == "California" | 
+                dat$location_name == "Texas" | dat$location_name == "Illinois" | 
+                dat$location_name == "Georgia" | dat$location_name == "North Carolina") 
+mini = mini[c("location_name","date","deaths_mean_smoothed","deaths_lower_smoothed", "deaths_upper_smoothed","est_infections_mean","est_infections_lower","est_infections_upper")] 
+write.csv("~/Dropbox/Work and research/Port Authority/ihme/Six states.csv") 
+```
+
