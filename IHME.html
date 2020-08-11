@@ -189,9 +189,7 @@ mini = subset(dat, dat$location_name==&quot;Florida&quot; | dat$location_name ==
                 dat$location_name == &quot;Texas&quot; | dat$location_name == &quot;Illinois&quot; | 
                 dat$location_name == &quot;Georgia&quot; | dat$location_name == &quot;North Carolina&quot;) 
 mini = mini[c(&quot;location_name&quot;,&quot;date&quot;,&quot;deaths_mean_smoothed&quot;,&quot;deaths_lower_smoothed&quot;, &quot;deaths_upper_smoothed&quot;,&quot;est_infections_mean&quot;,&quot;est_infections_lower&quot;,&quot;est_infections_upper&quot;)] 
-write.csv(&quot;~/Dropbox/Work and research/Port Authority/ihme/Six states.csv&quot;) </code></pre>
-<pre><code>## &quot;&quot;,&quot;x&quot;
-## &quot;1&quot;,&quot;~/Dropbox/Work and research/Port Authority/ihme/Six states.csv&quot;</code></pre>
+write.csv(mini, &quot;~/Dropbox/Work and research/Port Authority/ihme/Six_states.csv&quot;) </code></pre>
 
 
 

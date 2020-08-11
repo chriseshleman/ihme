@@ -13,8 +13,8 @@ knitr::opts_chunk$set(echo = TRUE, include=TRUE)
 dat = read.csv("~/Dropbox/Work and research/Port Authority/ihme/Reference_hospitalization_all_locs.csv")
 mini = subset(dat, dat$location_name=="Florida" | dat$location_name == "California" | 
                 dat$location_name == "Texas" | dat$location_name == "Illinois" | 
-                dat$location_name == "Georgia" | dat$location_name == "North Carolina") 
+                dat$location_id == 533 | dat$location_name == "North Carolina")  #533 is the location ID for Georgia (to distinguish it from the country of Georgia, which is 35). 
 mini = mini[c("location_name","date","deaths_mean_smoothed","deaths_lower_smoothed", "deaths_upper_smoothed","est_infections_mean","est_infections_lower","est_infections_upper")] 
-write.csv("~/Dropbox/Work and research/Port Authority/ihme/Six states.csv") 
+write.csv(mini, "~/Dropbox/Work and research/Port Authority/ihme/Six_states.csv") 
 ```
 
